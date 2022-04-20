@@ -7,5 +7,5 @@
 
 ## TODO
 
-[] Support for tab and enter - react-focus-trap[https://www.npmjs.com/package/focus-trap-react]
-[] Example Form with validation
+- [ ] Support for tab and enter - react-focus-trap[https://www.npmjs.com/package/focus-trap-react]
+- [ ] Example Form with validation
