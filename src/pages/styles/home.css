@@ -1,0 +1,33 @@
+.home {
+  background-image: url('./../../resources/questionMarks.jpg');
+  width: 100%;
+  height: 100vh;
+}
+
+.home button {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 2rem;
+  font-size: 4rem;
+
+  border: .1rem solid #000;
+  border-radius: .5rem;
+
+  cursor: pointer;
+
+  background: #268;
+  color: #FFF;
+
+  transition: all 0.5s;
+}
+
+.home button:hover {
+  box-shadow: #FFF 0rem 0rem 4rem;
+  background: #862;
+  border: none;
+
+  transition: all 0.5s;
+}

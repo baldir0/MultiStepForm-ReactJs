@@ -1,0 +1,55 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+form h1 {
+  color: #FFF;
+}
+
+form .formControlButtons {
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+}
+
+form .formControlButtons input[name="nextPage"], 
+form .formControlButtons input[name="prevPage"]{
+  font-size: 2rem;
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+
+  border: none;
+  border-bottom: .2rem solid #111A;
+  color: #FFF;
+  transition: all .5s;
+}
+
+form .formControlButtons input[name="nextPage"] {
+  background-color: #F60;
+}
+
+form .formControlButtons input[name="prevPage"] {
+  background-color: #444;
+}
+
+form .formControlButtons input[name="nextPage"]:hover {
+  background-color: #B40;
+  transform: scale(1.1, 1.1);
+  transition: all .5s;
+}
+
+form .formControlButtons input[name="prevPage"]:hover {
+  background-color: #333;
+  transform: scale(1.1, 1.1);
+  transition: all .5s;
+}
+
+.error {
+  color: red;
+}

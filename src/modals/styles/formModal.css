@@ -1,0 +1,43 @@
+.modalbg { /* cspell: disable-line */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+
+  backdrop-filter: blur(1rem);
+  z-index: 999;
+}
+
+.modal {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  background: #222A;
+  padding: 3rem;
+
+  box-shadow: #FFF 0 0 5rem;
+  border: .1rem solid #111;
+  border-radius: .5rem;
+
+  animation: fadeIn 0.5s;
+  z-index: 1000;
+}
+
+.modal .closeButton {
+  width: 100%;
+  height: 2rem;
+}
+
+@keyframes fadeIn{
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;;
+  }
+}

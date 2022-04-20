@@ -1,0 +1,46 @@
+input[type="text"] {
+  font-size: 1.5rem;
+  border: none;
+  border-bottom: .2rem solid #111A;
+  
+  background-color: #222A;
+  color: #FFF;
+  border-radius: .1rem;
+  padding: .2rem;
+  transition: all .6s;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-bottom: .2rem solid #F60;
+}
+
+
+@keyframes fadeIn{
+  0% {
+    transform: translateY(-10%);
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+input[type="submit"] {
+  background-color: #7F7;
+  border-radius: .2rem;
+  cursor: pointer;
+  width: 100;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: #FFF;
+  border: none;
+  border-bottom: .2rem solid #111A;
+  transition: all .5s;
+}
+
+input[type="submit"]:hover {
+  background-color: #1F1;
+  transform: scale(1.1, 1.1);
+}

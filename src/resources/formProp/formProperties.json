@@ -1,0 +1,13 @@
+[
+  [
+    { "type": "text", "placeholder": "Imię", "name": "firstName" },
+    { "type": "text", "placeholder": "Nazwisko", "name": "lastName" },
+    { "type": "text", "placeholder": "Adres email", "name": "email" },
+    { "type": "text", "placeholder": "Numer telefonu", "name": "phoneNumber" }
+  ],
+  [
+    { "type": "text", "placeholder": "Wykształcenie", "name": "educationLevel" },
+    { "type": "text", "placeholder": "Stanowisko", "name": "position"},
+    { "type": "submit", "value": "Wyślij Formularz" }
+  ]
+]
