@@ -3,8 +3,9 @@ import FormModal from './../modals/formModal';
 import MultiPageForm from './../components/formComponent';
 import './styles/home.css';
 
-import Pages from '../resources/formProp/formProperties.json'
-import ValidationSchema from '../schemas/formSchema'
+
+import Pages from '../resources/formProp/formProperties.json';
+import ValidationSchema from '../schemas/formSchema';
 
 function Home() {
 	const [isOpen, setIsOpen] = useState(false);
