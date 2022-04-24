@@ -1,4 +1,4 @@
-form {
+.form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,49 +7,42 @@ form {
   width: 100%;
 }
 
-form h1 {
-  color: #FFF;
+.title {
+  color: #fff;
 }
 
-form .formControlButtons {
+.form .container-controlButtons {
   display: flex;
   flex-direction: row;
-  gap: .5rem;
+
+  gap: 0.5rem;
 }
 
-form .formControlButtons input[name="nextPage"], 
-form .formControlButtons input[name="prevPage"]{
+.container-controlButtons .next,
+.container-controlButtons .prev {
   font-size: 2rem;
-  cursor: pointer;
   width: 3rem;
   height: 3rem;
 
-  border: none;
-  border-bottom: .2rem solid #111A;
-  color: #FFF;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
-form .formControlButtons input[name="nextPage"] {
-  background-color: #F60;
+.container-controlButtons .next {
+  background-color: #f60;
 }
 
-form .formControlButtons input[name="prevPage"] {
+.container-controlButtons .prev {
   background-color: #444;
 }
 
-form .formControlButtons input[name="nextPage"]:hover {
-  background-color: #B40;
+.container-controlButtons .next:hover {
+  background-color: #b40;
   transform: scale(1.1, 1.1);
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
-form .formControlButtons input[name="prevPage"]:hover {
+.container-controlButtons .prev:hover {
   background-color: #333;
   transform: scale(1.1, 1.1);
-  transition: all .5s;
-}
-
-.error {
-  color: red;
+  transition: all 0.5s;
 }

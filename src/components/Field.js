@@ -2,30 +2,16 @@ import React from 'react';
 
 import './styles/field.css';
 
-export default function Field({
-  type,
-  name,
-  register,
-  value = '',
-  placeholder = '',
-  onChange = () => {},
-}) {
-  const key = '_uid=' + type + '_' + name;
-  switch (type) {
-    case 'text' || 'password':
-      return (
-        <input
-          type={type}
-          name={name}
-          placeholder={placeholder}
-          key={key}
-          {...register(name)}
-          onChange={onChange}
-        />
-      );
-    case 'submit':
-      return <input type={type} key={key} />;
-    default:
-      return <p key={'Unknown type: ' + type}>Unknown Type</p>;
-  }
+export default function Field({ attributes, register, events }) {
+  const name = attributes.name;
+  const type = attributes.type;
+  // if (type === 'button' || type === 'submit') {
+  //   return <input {...attributes} {...events} className="button"/>
+  // }
+  // return <input {...attributes} {...register(name)} {...events} className="input"/>;
+
+  return (
+    (type === 'button' || type === 'submit') && 
+    (<input {...attributes} {...events} className="button" />)) ||
+    <input {...attributes} {...register(name)} {...events} className="input"/>;
 }

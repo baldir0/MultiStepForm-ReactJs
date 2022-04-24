@@ -3,21 +3,22 @@ import ReactDOM from 'react-dom';
 
 import './styles/formModal.css';
 
-function formModal({ isOpen, children, onClose }) {
+function FormModal({ isOpen, children, close }) {
+  const element = document.querySelector('.portal-container');
   if (!isOpen) {
-    document.getElementById('portal-root').style.display = 'none';
+    if (element) element.classList.add('hidden');
     return null;
   }
-  document.getElementById('portal-root').style.display = 'flex';
+  if (element) element.classList.remove('hidden');
   // cspell:disable
   return ReactDOM.createPortal(
-    <>
-      <div className="modalbg" onClick={onClose}></div>
-      <div className="modal">{children}</div>
-    </>,
+    <div className="modal">
+      <div className="background" onClick={close}></div>
+      <div className="content center">{children}</div>
+    </div>,
     document.getElementById('portal-root')
   );
   // cspell:enable
 }
 
-export default formModal;
+export default FormModal;
