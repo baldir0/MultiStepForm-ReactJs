@@ -14,15 +14,15 @@ function Home() {
   const closeModal = () => setIsOpen(false);
   return (
     <div className="home">
-      <button className="button center open-modal" onClick={()=>openModal()}>
+      <button className="button center open-modal" onClick={openModal}>
         Otwórz Formularz
       </button>
-      <FormModal isOpen={isOpen} close={()=>closeModal()}>
+      <FormModal isOpen={isOpen} close={closeModal}>
         <MultiPageForm
           title="User Declaration Form"
           pages={Pages}
           resolver={ValidationSchema}
-          close={()=>closeModal()}
+          close={closeModal}
         />
       </FormModal>
       <ToastContainer limit={5} />

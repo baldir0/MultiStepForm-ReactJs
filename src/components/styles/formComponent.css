@@ -18,6 +18,10 @@
   gap: 0.5rem;
 }
 
+.form label {
+  color: #FFF;
+}
+
 .container-controlButtons .next,
 .container-controlButtons .prev {
   font-size: 2rem;

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { yupResolver } from '@hookform/resolvers/yup'; //cspell:disable-line
 import { useForm } from 'react-hook-form';
 import Field from './Field';
+import FormController from './FormController';
 import FocusTrap from 'focus-trap-react';
 
 import { toast } from 'react-toastify';
@@ -16,11 +17,7 @@ export default function MultiPageForm({ title, pages, resolver, close }) {
   const isLastPage = page === pages.length - 1 ? true : false;
   const isFirstPage = page === 0 ? true : false;
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
+  const { register, handleSubmit } = useForm({
     resolver: yupResolver(resolver),
     mode: 'onSubmit',
     reValidateMode: 'onBlur',
@@ -41,7 +38,7 @@ export default function MultiPageForm({ title, pages, resolver, close }) {
     return setPage(page + 1);
   }
 
-  function errorHandler() {
+  function errorHandler(errors) {
     Object.keys(errors).forEach((key) => {
       const name = errors[key].ref.placeholder;
       const message = errors[key].message;
@@ -71,36 +68,29 @@ export default function MultiPageForm({ title, pages, resolver, close }) {
     return nextPage(data);
   }
 
+  function fetchField(inputArgs) {
+    return (
+      <label key={inputArgs.name + '_label'}>
+        <Field attributes={inputArgs} register={register}></Field>
+        {inputArgs.label}
+      </label>
+    );
+  }
+
   function fetchPage(pageInputs) {
     return (
       <FocusTrap focusTrapOptions={{ allowOutsideClick: true }}>
-        <form onSubmit={handleSubmit(submitHandler, errorHandler)} className="form">
-          {pageInputs.map((inputArgs) => {
-            return (
-              <label key={inputArgs.name + '_label'}>
-                <Field attributes={inputArgs} register={register}></Field>
-              </label>
-            );
-          })}
-          <div className="container-controlButtons">
-            {!isFirstPage && (
-              <input
-                type="button"
-                value="<"
-                name="prevPage"
-                className="button prev"
-                onClick={prevPage}
-              />
-            )}
-            {!isLastPage && (
-              <input
-                type="submit"
-                value=">"
-                name="nextPage"
-                className="button next"
-              />
-            )}
-          </div>
+        <form
+          onSubmit={handleSubmit(submitHandler, errorHandler)}
+          className="form"
+        >
+          {pageInputs.map((inputArgs) => fetchField(inputArgs))}
+          <FormController
+            isFirstPage={isFirstPage}
+            isLastPage={isLastPage}
+            nextPage={nextPage}
+            prevPage={prevPage}
+          />
         </form>
       </FocusTrap>
     );

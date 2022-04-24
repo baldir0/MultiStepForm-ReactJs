@@ -19,6 +19,13 @@
       "type": "tel", 
       "placeholder": "Numer telefonu", 
       "name": "phoneNumber"
+    }, 
+    {
+      "type": "checkbox",
+      "name": "check",
+      "placeholder": "Check",
+      "label": "I am not a Robot :>",
+      "value": "notRobot"
     }
   ],
   [
