@@ -14,11 +14,10 @@ function FormController({ isLastPage, isFirstPage, nextPage, prevPage }) {
       )}
       {!isLastPage && (
         <input
-          type="button"
+          type="submit"
           className="button next"
           value=">"
           name="prevPage"
-          onClick={nextPage}
         />
       )}
     </div>
