@@ -21,7 +21,8 @@ button {
   border-bottom: .2rem solid #111A;
 }
 
-input[type="submit"] {
+input[type="submit"],
+input[type="button"] {
   cursor: pointer;
 }
 

@@ -3,7 +3,6 @@ input[type="submit"] {
   font-size: 2rem;
   transition: all .5s;
 }
-
 input[type="submit"]:hover {
   background-color: #1F1;
   transform: scale(1.05, 1.05);
