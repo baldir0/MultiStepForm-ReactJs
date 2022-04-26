@@ -1,12 +1,13 @@
 import React from 'react';
+import styles from './FormController.module.css'
 
-function FormController({ isLastPage, isFirstPage, nextPage, prevPage }) {
+function FormController({ isLastPage, isFirstPage, prevPage }) {
   return (
-    <div className="container-controlButtons">
+    <div className={styles['container-controlButtons']}>
       {!isFirstPage && (
         <input
           type="button"
-          className="button prev"
+          className={styles.prev}
           value="<"
           name="prevPage"
           onClick={prevPage}
@@ -15,7 +16,7 @@ function FormController({ isLastPage, isFirstPage, nextPage, prevPage }) {
       {!isLastPage && (
         <input
           type="submit"
-          className="button next"
+          className={styles.next}
           value=">"
           name="prevPage"
         />

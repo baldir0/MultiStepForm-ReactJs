@@ -1,0 +1,23 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.title {
+  color: #fff;
+}
+
+.form .container-controlButtons {
+  display: flex;
+  flex-direction: row;
+
+  gap: 0.5rem;
+}
+
+.form label {
+  color: #FFF;
+}

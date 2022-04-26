@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './styles/formModal.css';
+import './FormModal.css';
 
 function FormModal({ isOpen, children, close }) {
   const element = document.querySelector('.portal-container');

@@ -13,7 +13,7 @@
   display: none;
 }
 
-.button {
+button {
   border-radius: .2rem;
   cursor: pointer;
   color: #FFF;
@@ -21,7 +21,11 @@
   border-bottom: .2rem solid #111A;
 }
 
-.input {
+input[type="submit"] {
+  cursor: pointer;
+}
+
+input {
   background-color: #222A;
   color: #FFF;
   font-size: 1.5rem;
@@ -32,7 +36,7 @@
   transition: all .5s;
 }
 
-.input:focus {
+input:focus {
   outline: none;
   border-bottom: .2rem solid #F60;
   transition: all .5s;
